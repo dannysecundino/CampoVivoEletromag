@@ -48,7 +48,7 @@ git clone https://github.com/dannysecundino/CampoVivoEletromag.git
 Entre na pasta do projeto:
 
 ```bash
-cd campovivoeletromag
+cd CampoVivoEletromag
 ```
 
 Abra o arquivo `src/index.html` em qualquer navegador ou utilize uma extensão como **Live Server** no VS Code.
