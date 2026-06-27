@@ -24,7 +24,7 @@ O projeto foi desenvolvido utilizando apenas tecnologias web, priorizando simpli
 ## 📂 Estrutura do projeto
 
 ```
-campovivoeletromag/
+CampoVivoEletromag/
 │
 └── src/
     ├── css/
