@@ -1,0 +1,371 @@
+.cap-sim-wrapper {
+
+    background: var(--surf);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    margin-bottom: 2rem;
+
+}
+
+
+
+.cap-sim-header {
+
+    padding: 1rem 1.3rem 0.8rem;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.2rem;
+
+}
+
+.cap-sim-title {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.65rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.18em;
+
+    color: var(--accent);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+}
+
+.cap-sim-dot {
+
+    width: 7px; height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    box-shadow: 0 0 8px var(--accent);
+
+    animation: cap-blink 1.6s ease-in-out infinite;
+
+}
+
+@keyframes cap-blink {
+
+    0%,100% { opacity: 1; }
+
+    50%      { opacity: 0.3; }
+
+}
+
+.cap-sim-subtitle {
+
+    font-size: 0.78rem;
+
+    color: var(--muted);
+
+}
+
+
+
+.cap-canvas-wrap {
+
+    border-bottom: 1px solid var(--border);
+
+    background: #07090f;
+
+    line-height: 0;
+
+}
+
+.cap-canvas-wrap canvas {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+}
+
+
+
+.cap-controls {
+
+    padding: 0.9rem 1.3rem;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.9rem;
+
+}
+
+.cap-ctrl-row {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.4rem;
+
+}
+
+.cap-ctrl-label {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.6rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+
+    color: var(--muted);
+
+}
+
+.cap-val {
+
+    color: var(--accent);
+
+    font-weight: 700;
+
+}
+
+.cap-slider {
+
+    -webkit-appearance: none;
+
+    width: 100%;
+
+    height: 3px;
+
+    border-radius: 2px;
+
+    background: var(--border);
+
+    outline: none;
+
+    cursor: pointer;
+
+}
+
+.cap-slider::-webkit-slider-thumb {
+
+    -webkit-appearance: none;
+
+    width: 15px; height: 15px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    cursor: pointer;
+
+    box-shadow: 0 0 8px rgba(56,189,248,0.6);
+
+}
+
+.cap-slider::-moz-range-thumb {
+
+    width: 15px; height: 15px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    cursor: pointer;
+
+    box-shadow: 0 0 8px rgba(56,189,248,0.6);
+
+}
+
+
+
+.cap-readout {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.cap-read-card {
+
+    padding: 0.7rem 1rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.2rem;
+
+}
+
+.cap-read-card:not(:last-child) {
+
+    border-right: 1px solid var(--border);
+
+}
+
+.cap-read-label {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.55rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+
+    color: var(--muted);
+
+}
+
+.cap-read-val {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.88rem;
+
+    font-weight: 700;
+
+    color: var(--text);
+
+    transition: color 0.25s;
+
+}
+
+.cap-read-highlight {
+
+    color: var(--accent);
+
+}
+
+
+
+.cap-bar-wrap {
+
+    padding: 0.8rem 1.3rem 0.9rem;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.cap-bar-label {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.58rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+
+    color: var(--muted);
+
+    margin-bottom: 0.4rem;
+
+}
+
+.cap-bar-label span:last-child {
+
+    color: var(--accent);
+
+    font-weight: 700;
+
+}
+
+.cap-bar-track {
+
+    width: 100%;
+
+    height: 8px;
+
+    border-radius: 999px;
+
+    background: var(--border2);
+
+    overflow: hidden;
+
+}
+
+.cap-bar-fill {
+
+    height: 100%;
+
+    border-radius: 999px;
+
+    background: linear-gradient(90deg, var(--accent), #7dd3fc);
+
+    width: 0%;
+
+    transition: width 0.25s ease;
+
+}
+
+
+
+.cap-insight {
+
+    padding: 0.8rem 1.3rem;
+
+    font-size: 0.82rem;
+
+    color: var(--muted);
+
+    line-height: 1.55;
+
+    min-height: 3rem;
+
+    font-style: italic;
+
+    transition: color 0.3s;
+
+}
+
+
+
+/* responsivo */
+
+@media (max-width: 580px) {
+
+    .cap-readout { grid-template-columns: 1fr 1fr; }
+
+    .cap-read-card:nth-child(2) { border-right: none; }
+
+    .cap-read-card:nth-child(3) {
+
+    grid-column: 1/-1;
+
+    border-right: none;
+
+    border-top: 1px solid var(--border);
+
+    }
+
+}

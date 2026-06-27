@@ -1,0 +1,227 @@
+.far-wrapper {
+
+    background: var(--surf);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    margin-bottom: 2rem;
+
+}
+
+.far-header {
+
+    padding: 0.9rem 1.2rem 0.7rem;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.far-title {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.65rem; text-transform: uppercase;
+
+    letter-spacing: 0.14em; color: var(--accent2);
+
+    display: flex; align-items: center; gap: 0.5rem;
+
+}
+
+.far-dot {
+
+    width: 7px; height: 7px; border-radius: 50%;
+
+    background: var(--accent2); box-shadow: 0 0 6px var(--accent2);
+
+}
+
+.far-subtitle { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+
+
+
+.far-body {
+
+    display: grid; grid-template-columns: 1fr 1fr;
+
+    border-bottom: 1px solid var(--border);
+
+    background: #07090f;
+
+}
+
+.far-anim-wrap { border-right: 1px solid var(--border); }
+
+.far-graph-wrap {}
+
+.far-anim-wrap canvas, .far-graph-wrap canvas { display: block; width: 100%; }
+
+
+
+.far-controls {
+
+    display: grid; grid-template-columns: repeat(3,1fr);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.far-ctrl { padding: 0.85rem 1rem; border-right: 1px solid var(--border); }
+
+.far-ctrl:last-child { border-right: none; }
+
+.far-clbl {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.58rem; text-transform: uppercase;
+
+    letter-spacing: 0.1em; color: var(--muted);
+
+    display: flex; justify-content: space-between;
+
+    margin-bottom: 0.45rem;
+
+}
+
+.far-cval { color: var(--accent2); }
+
+.far-slider {
+
+    -webkit-appearance: none; width: 100%; height: 3px;
+
+    border-radius: 2px; background: var(--border2);
+
+    outline: none; cursor: pointer;
+
+}
+
+.far-slider::-webkit-slider-thumb {
+
+    -webkit-appearance: none; width: 14px; height: 14px;
+
+    border-radius: 50%; background: var(--accent2); cursor: pointer;
+
+    box-shadow: 0 0 7px rgba(245,158,11,0.6);
+
+}
+
+
+
+.far-action-row {
+
+    display: flex; gap: 0.5rem;
+
+    padding: 0.7rem 1rem;
+
+    border-bottom: 1px solid var(--border);
+
+    align-items: center; flex-wrap: wrap;
+
+}
+
+.far-btn {
+
+    padding: 0.4rem 1rem;
+
+    border-radius: 8px; font-family: 'Space Mono', monospace;
+
+    font-size: 0.64rem; text-transform: uppercase;
+
+    letter-spacing: 0.06em; cursor: pointer;
+
+    border: 1px solid var(--border);
+
+    background: var(--surf2); color: var(--muted);
+
+    transition: all 0.15s;
+
+}
+
+.far-btn:hover { background: var(--border); color: var(--text); }
+
+.far-btn.primary {
+
+    border-color: var(--accent2);
+
+    background: rgba(245,158,11,0.1); color: var(--accent2);
+
+}
+
+.far-btn.primary:hover { background: rgba(245,158,11,0.2); }
+
+.far-btn.active-pol { border-color: var(--accent); background: rgba(56,189,248,0.12); color: var(--accent); }
+
+
+
+.far-readout {
+
+    display: grid; grid-template-columns: repeat(4,1fr);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.far-rcard { padding: 0.75rem 1rem; border-right: 1px solid var(--border); }
+
+.far-rcard:last-child { border-right: none; }
+
+.far-rlbl {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.5rem; text-transform: uppercase;
+
+    letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.28rem;
+
+}
+
+.far-rval {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.86rem; font-weight: 700;
+
+    color: var(--text); transition: color 0.2s;
+
+}
+
+
+
+.far-insight {
+
+    padding: 0.75rem 1.3rem;
+
+    font-size: 0.82rem; color: var(--muted);
+
+    line-height: 1.55; font-style: italic;
+
+    min-height: 3rem;
+
+}
+
+
+
+@media (max-width: 600px) {
+
+    .far-body { grid-template-columns: 1fr; }
+
+    .far-anim-wrap { border-right: none; border-bottom: 1px solid var(--border); }
+
+    .far-controls { grid-template-columns: 1fr; }
+
+    .far-ctrl { border-right: none; border-bottom: 1px solid var(--border); }
+
+    .far-ctrl:last-child { border-bottom: none; }
+
+    .far-readout { grid-template-columns: 1fr 1fr; }
+
+    .far-rcard:nth-child(3) { border-top: 1px solid var(--border); }
+
+    .far-rcard:nth-child(4) { grid-column:1/-1; border-right:none; border-top:1px solid var(--border); }
+
+}

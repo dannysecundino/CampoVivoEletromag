@@ -24,18 +24,13 @@ O projeto foi desenvolvido utilizando apenas tecnologias web, priorizando simpli
 ## 📂 Estrutura do projeto
 
 ```
-extEletromag/
+campovivoeletromag/
 │
 ├── src/
-│   ├── images/
-│   └── index.html
-│
-├── firebase.json
-├── .firebaserc
-├── package.json
-├── package-LOCK.json
-└── README.md
-
+    ├── css/
+    ├── images/
+    ├── js/
+    └── index.html
 ```
 
 ## 🌐 Acesso

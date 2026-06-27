@@ -1,0 +1,307 @@
+/* ── wrapper ── */
+
+.ltz-wrapper {
+
+    background: var(--surf);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    margin-bottom: 2rem;
+
+}
+
+
+
+/* ── header ── */
+
+.ltz-header {
+
+    padding: 0.9rem 1.3rem 0.7rem;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.ltz-title {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.65rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.18em;
+
+    color: var(--accent2);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+}
+
+.ltz-dot {
+
+    width: 7px; height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--accent2);
+
+    box-shadow: 0 0 8px var(--accent2);
+
+    animation: ltz-blink 1.8s ease-in-out infinite;
+
+}
+
+@keyframes ltz-blink { 0%,100%{opacity:1} 50%{opacity:0.25} }
+
+.ltz-subtitle { font-size: 0.78rem; color: var(--muted); margin-top: 0.15rem; }
+
+
+
+/* ── canvas ── */
+
+.ltz-canvas-wrap {
+
+    border-bottom: 1px solid var(--border);
+
+    background: #07090f;
+
+    line-height: 0;
+
+}
+
+.ltz-canvas-wrap canvas { display: block; width: 100%; height: auto; }
+
+
+
+/* ── controles ── */
+
+.ltz-ctrls {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.ltz-ctrl {
+
+    padding: 0.85rem 1rem;
+
+    border-right: 1px solid var(--border);
+
+}
+
+.ltz-clbl {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.57rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+
+    color: var(--muted);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 0.5rem;
+
+}
+
+.ltz-cval { color: var(--accent2); font-weight: 700; }
+
+.ltz-trow { display: flex; gap: 0.4rem; }
+
+.ltz-sbtn {
+
+    flex: 1;
+
+    padding: 0.35rem 0;
+
+    border-radius: 6px;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    border: 1px solid var(--border);
+
+    background: var(--bg);
+
+    color: var(--muted);
+
+    transition: all 0.15s;
+
+}
+
+.ltz-sbtn:hover { border-color: var(--accent2); color: var(--accent2); }
+
+.ltz-active-pos { background: rgba(244,63,94,.15); border-color: var(--red); color: var(--red); }
+
+.ltz-active-neg { background: rgba(56,189,248,.15); border-color: var(--accent); color: var(--accent); }
+
+.ltz-active-v   { background: rgba(16,185,129,.15);  border-color: var(--green); color: var(--green); }
+
+.ltz-active-b   { background: rgba(167,139,250,.15); border-color: var(--purple); color: var(--purple); }
+
+
+
+/* ── leituras ── */
+
+.ltz-reads {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.ltz-rcard {
+
+    padding: 0.75rem 1rem;
+
+    border-right: 1px solid var(--border);
+
+}
+
+.ltz-rcard:last-child { border-right: none; }
+
+.ltz-rlbl {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.5rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+
+    color: var(--muted);
+
+    margin-bottom: 0.28rem;
+
+}
+
+.ltz-rval {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.86rem;
+
+    font-weight: 700;
+
+    color: var(--text);
+
+    transition: color 0.2s;
+
+}
+
+
+
+/* ── painel mão ── */
+
+.ltz-hand {
+
+    border-bottom: 1px solid var(--border);
+
+    padding: 0.9rem 1.2rem;
+
+    display: grid;
+
+    grid-template-columns: 52px 1fr;
+
+    gap: 0.9rem;
+
+    align-items: start;
+
+}
+
+.ltz-hand-icon { font-size: 2.4rem; line-height: 1; }
+
+.ltz-hsteps { display: flex; flex-direction: column; gap: 0.42rem; }
+
+.ltz-hstep {
+
+    display: flex; gap: 0.55rem; align-items: flex-start;
+
+    font-size: 0.79rem; color: var(--muted); line-height: 1.5;
+
+}
+
+.ltz-hbadge {
+
+    min-width: 19px; height: 19px; border-radius: 50%;
+
+    display: flex; align-items: center; justify-content: center;
+
+    font-family: 'Space Mono', monospace; font-size: 0.58rem; font-weight: 700;
+
+    flex-shrink: 0; margin-top: 2px; border: 1px solid;
+
+}
+
+.ltz-hresult {
+
+    margin-top: 0.38rem; padding: 0.5rem 0.85rem; border-radius: 8px;
+
+    font-size: 0.8rem; font-weight: 600; text-align: center;
+
+    border: 1px solid var(--border); transition: all 0.3s; color: var(--muted);
+
+}
+
+
+
+/* ── insight ── */
+
+.ltz-insight {
+
+    padding: 0.7rem 1.3rem; font-size: 0.8rem; color: var(--muted);
+
+    line-height: 1.55; font-style: italic; min-height: 2.8rem;
+
+}
+
+
+
+/* ── responsivo ── */
+
+@media (max-width: 560px) {
+
+    .ltz-ctrls { grid-template-columns: 1fr; }
+
+    .ltz-ctrl  { border-right: none; border-bottom: 1px solid var(--border); }
+
+    .ltz-ctrl:last-child { border-bottom: none; }
+
+    .ltz-reads { grid-template-columns: 1fr 1fr; }
+
+    .ltz-rcard:nth-child(2) { border-right: none; }
+
+    .ltz-rcard:nth-child(3) { grid-column:1/-1; border-right:none; border-top:1px solid var(--border); }
+
+    .ltz-hand  { grid-template-columns: 1fr; }
+
+}

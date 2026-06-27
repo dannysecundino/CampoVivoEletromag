@@ -1,0 +1,329 @@
+/* wrapper geral — herda o background do site */
+
+.coax-sim-wrapper {
+
+    background: var(--surf);
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    margin-bottom: 2rem;
+
+}
+
+
+
+/* cabeçalho */
+
+.coax-sim-header {
+
+    padding: 1rem 1.3rem 0.8rem;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.2rem;
+
+}
+
+.coax-sim-title {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.65rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.18em;
+
+    color: var(--accent2);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.5rem;
+
+}
+
+.coax-sim-dot {
+
+    width: 7px; height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--accent2);
+
+    box-shadow: 0 0 8px var(--accent2);
+
+    animation: coax-blink 1.6s ease-in-out infinite;
+
+}
+
+@keyframes coax-blink {
+
+    0%,100% { opacity: 1; }
+
+    50%      { opacity: 0.3; }
+
+}
+
+.coax-sim-subtitle {
+
+    font-size: 0.78rem;
+
+    color: var(--muted);
+
+}
+
+
+
+/* canvases */
+
+.coax-canvases {
+
+    display: flex;
+
+    gap: 0;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.coax-canvas-block {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.coax-canvas-block:first-child {
+
+    border-right: 1px solid var(--border);
+
+}
+
+.coax-canvas-label {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.55rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12em;
+
+    color: var(--muted);
+
+    padding: 0.5rem 0.8rem 0.3rem;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.coax-canvas-block canvas {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    background: #07090f;
+
+}
+
+
+
+/* controles */
+
+.coax-controls {
+
+    padding: 0.9rem 1.3rem;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.coax-ctrl-row {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.4rem;
+
+}
+
+.coax-ctrl-label {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.6rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+
+    color: var(--muted);
+
+}
+
+.coax-val {
+
+    color: var(--accent2);
+
+    font-weight: 700;
+
+}
+
+.coax-slider {
+
+    -webkit-appearance: none;
+
+    width: 100%;
+
+    height: 3px;
+
+    border-radius: 2px;
+
+    background: var(--border);
+
+    outline: none;
+
+    cursor: pointer;
+
+}
+
+.coax-slider::-webkit-slider-thumb {
+
+    -webkit-appearance: none;
+
+    width: 15px; height: 15px;
+
+    border-radius: 50%;
+
+    background: var(--accent2);
+
+    cursor: pointer;
+
+    box-shadow: 0 0 8px rgba(245,158,11,0.6);
+
+}
+
+
+
+/* cards de leitura */
+
+.coax-readout {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+.coax-read-card {
+
+    padding: 0.7rem 1rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.2rem;
+
+}
+
+.coax-read-card:not(:last-child) {
+
+    border-right: 1px solid var(--border);
+
+}
+
+.coax-read-label {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.55rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+
+    color: var(--muted);
+
+}
+
+.coax-read-val {
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.88rem;
+
+    font-weight: 700;
+
+    color: var(--text);
+
+    transition: color 0.25s;
+
+}
+
+
+
+/* insight textual */
+
+.coax-insight {
+
+    padding: 0.8rem 1.3rem;
+
+    font-size: 0.82rem;
+
+    color: var(--muted);
+
+    line-height: 1.55;
+
+    min-height: 3rem;
+
+    font-style: italic;
+
+    transition: color 0.3s;
+
+}
+
+
+
+/* responsivo — empilha em mobile */
+
+@media (max-width: 580px) {
+
+    .coax-canvases { flex-direction: column; }
+
+    .coax-canvas-block:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+
+    .coax-readout { grid-template-columns: 1fr 1fr; }
+
+    .coax-read-card:nth-child(2) { border-right: none; }
+
+    .coax-read-card:nth-child(3) {
+
+    grid-column: 1/-1;
+
+    border-right: none;
+
+    border-top: 1px solid var(--border);
+
+    }
+
+}
