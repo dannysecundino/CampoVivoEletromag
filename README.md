@@ -1,4 +1,4 @@
-# ⚡ Campo Vivo Eletromag
+# ⚡ Campo Vivo — Eletromagnetismo
 
 Site desenvolvido como parte de um projeto acadêmico da disciplina de Eletromagnetismo, com o objetivo de apresentar, de forma didática e interativa, conteúdos relacionados ao campo elétrico, campo magnético e demais conceitos fundamentais da área.
 
