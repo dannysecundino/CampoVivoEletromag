@@ -26,7 +26,7 @@ O projeto foi desenvolvido utilizando apenas tecnologias web, priorizando simpli
 ```
 campovivoeletromag/
 │
-├── src/
+└── src/
     ├── css/
     ├── images/
     ├── js/
