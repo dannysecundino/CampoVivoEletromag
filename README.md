@@ -42,7 +42,7 @@ O projeto encontra-se publicado através do Firebase Hosting.
 Clone o repositório:
 
 ```bash
-git clone https://github.com/dannysecundino/campovivoeletromag.git
+git clone https://github.com/dannysecundino/CampoVivoEletromag.git
 ```
 
 Entre na pasta do projeto:
