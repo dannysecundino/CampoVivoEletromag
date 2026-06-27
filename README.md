@@ -36,6 +36,8 @@ extEletromag/
 ├── package-LOCK.json
 └── README.md
 
+```
+
 ## 🌐 Acesso
 
 O projeto encontra-se publicado através do Firebase Hosting.
