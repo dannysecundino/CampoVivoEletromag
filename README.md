@@ -14,6 +14,29 @@ O Campo Vivo Eletromag é uma página web responsiva que reúne informações, i
 
 O projeto foi desenvolvido utilizando apenas tecnologias web, priorizando simplicidade, organização e facilidade de navegação.
 
+## 🎯 Diferencial: Simulações Interativas
+
+Um dos principais diferenciais do **CampoVivo** é a presença de **12 simulações interativas**, desenvolvidas para tornar o aprendizado de Eletromagnetismo mais intuitivo e dinâmico.
+
+Cada simulação permite que o usuário manipule parâmetros físicos e visualize, em tempo real, o comportamento dos fenômenos estudados, promovendo uma compreensão mais profunda dos conceitos apresentados.
+
+As simulações abrangem os principais tópicos da disciplina:
+
+- ⚡ Lei de Coulomb
+- 🔵 Lei de Gauss
+- 〰️ Potencial Elétrico
+- 🔀 Dipolo Elétrico
+- 🔌 Resistores
+- ⚙️ Capacitores
+- 🌀 Lei de Biot-Savart
+- 🔁 Lei de Ampère
+- 🧲 Potenciais Magnéticos
+- 💥 Força Magnética
+- 📐 Efeito Hall
+- ∇ Equações de Maxwell
+
+As simulações proporcionam uma experiência fluida, responsiva e acessível diretamente no navegador.
+
 ## 🚀 Tecnologias utilizadas
 
 - HTML5
